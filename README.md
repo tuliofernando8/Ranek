@@ -1,5 +1,3 @@
-# ranek
-
 # Ranek
  - Projeto com foco na criação de uma página e-commerce.
  - Projeto final do curso Vue.js 2, da Origamid.
