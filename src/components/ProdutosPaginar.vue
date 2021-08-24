@@ -32,7 +32,6 @@ export default {
 
       pagesArray.splice(0, current - offset);
       pagesArray.splice(range, total);
-      console.log(pagesArray);
       return pagesArray;
     },
     paginasTotal() {
