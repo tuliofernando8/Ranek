@@ -23,7 +23,8 @@ export default {
         nome: "",
         preco: "",
         descricao: "",
-        fotos: null
+        fotos: null,
+        vendido: "false" // na api final conseguiremos puxar apenas string e nao bool
       }
     }
   },
