@@ -46,7 +46,8 @@ const routes = [
         path: "vendas",
         name: "vendas",
         component: UsuarioVendas,
-      },{
+      },
+      {
         path: "editar",
         name: "usuario-editar",
         component: UsuarioEditar,
