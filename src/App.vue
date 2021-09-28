@@ -13,11 +13,20 @@
 <script>
 import TheHeader from "@/components/TheHeader.vue";
 import TheFooter from "@/components/TheFooter.vue";
+import { api } from "@/services.js";
 
 export default {
   components: {
     TheFooter,
     TheHeader
+  },
+  created() {
+    api.validateToken().then(() =>{
+      this.$store.dispatch("getUsuario");
+    }).catch(error => {
+      window.localStorage.removeItem("token");
+      console.log(error);
+    });
   }
 }
 </script>
@@ -70,6 +79,12 @@ img {
 .btn:hover {
   background: #65d;
   transform: scale(1.1);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+  background: #bbc;
+  transform: scale(1);
 }
 
 #app {
