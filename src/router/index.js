@@ -8,10 +8,15 @@ import UsuarioProdutos from "../views/usuario/UsuarioProdutos.vue"
 import UsuarioVendas from "../views/usuario/UsuarioVendas.vue"
 import UsuarioCompras from "../views/usuario/UsuarioCompras.vue"
 import UsuarioEditar from "../views/usuario/UsuarioEditar.vue"
+import PaginaNaoEncontrada from "../views/PaginaNaoEncontrada.vue"
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: "*",
+    component: PaginaNaoEncontrada
+  },
   {
     path: "/",
     name: "Home",
@@ -31,6 +36,9 @@ const routes = [
   {
     path: "/usuario",
     component: Usuario,
+    meta: {
+      login: true
+    },
     children: [
       {
         path: "",
@@ -65,4 +73,16 @@ const router = new VueRouter({
   }
 })
 
-export default router
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.login)) {
+    if(!window.localStorage.token) {
+      next("/login");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+});
+
+export default router;
