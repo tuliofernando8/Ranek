@@ -27,7 +27,7 @@
 
 ![Compras](./src/assets/screenshots/produto_compras.png "Compras")
 
-Você pode conferir mais algumas imagens do projeto em [Screenshots]("./assets/screenshots").
+Você pode conferir mais algumas imagens do projeto em [Screenshots](https://github.com/tuliofernando8/Ranek/tree/main/src/assets/screenshots).
 
 # Comunicação Backend
  - A comunicação é feita através do programa XAMP e todo o backend foi feito utilizando Php e Wordpress.
