@@ -49,6 +49,7 @@ export default {
   },
   created() {
     this.login ? this.getUsuarioProdutos() : false;
+    document.title = "Usuário";
   },
 };
 </script>

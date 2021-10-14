@@ -36,8 +36,7 @@ export default {
       for(let i = 0; i < files.length; i++) {
         form.append(files[i].name, files[i]);
       }
-console.log(files);
-      
+        
       form.append("nome", this.produto.nome);
       form.append("preco", this.produto.preco);
       form.append("descricao", this.produto.descricao);
@@ -58,6 +57,12 @@ console.log(files);
 
       button.removeAttribute("disabled", "");
       button.value = "Adicionar Produto";
+
+      this.produto.nome = "";
+      this.produto.preco = "";
+      this.produto.descricao = "";
+      this.produto.fotos = null;
+
       
     }
   }

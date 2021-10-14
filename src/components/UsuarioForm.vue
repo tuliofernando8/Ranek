@@ -59,14 +59,16 @@ export default {
 </script>
 
 <style scoped>
-form,
-.usuario {
+form {
   display: grid;
   grid-template-columns: 80px 1fr;
   align-items: center;
 }
 
 .usuario {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
   grid-column: 1 / 3;
 }
 

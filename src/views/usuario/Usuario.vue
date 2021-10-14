@@ -1,5 +1,5 @@
 <template>
-  <section class="usuario">
+  <section class="usuario_sec">
     <nav class="sidenav">
       <ul>
         <li>
@@ -33,12 +33,15 @@ export default {
       this.$store.dispatch("deslogarUsuario");
       this.$router.push("/");
     }
+  },
+  created() {
+    document.title = "Usuário";
   }
 }
 </script>
 
 <style>
-.usuario {
+.usuario_sec {
   display: grid;
   grid-template-columns: minmax(140px, 200px) 1fr;
   max-width: 900px;
@@ -48,7 +51,7 @@ export default {
 }
 
 @media screen and(max-width: 500px) {
-  .usuario {
+  .usuario_sec {
     grid-template-columns: 1fr;
     margin: 0px auto;
   }
